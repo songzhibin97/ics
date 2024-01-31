@@ -19,6 +19,18 @@ type Parser struct {
 	errorsOccured   []error
 }
 
+func (p *Parser) GetCalendars() []*Calendar {
+	return p.parsedCalendars
+}
+
+func (p *Parser) GetEvents() []*Event {
+	return p.parsedEvents
+}
+
+func (p *Parser) GetErrors() []error {
+	return p.errorsOccured
+}
+
 func NewParserByUrl(url string) (*Parser, error) {
 	resp, err := resty.New().R().Get(url)
 	if err != nil {

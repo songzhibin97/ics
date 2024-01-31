@@ -12,6 +12,8 @@ go get github.com/songzhibin97/ics
 
 ## import
 ```go
+package main
+
 import "github.com/songzhibin97/ics"
 ```
 
